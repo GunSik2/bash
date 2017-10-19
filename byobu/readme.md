@@ -23,10 +23,10 @@ SHIFT+F2 creates a horizontal pane; CTRL+F2 creates a vertical one
 new-session 'bash' ;
 
 new-window -n webu ssh -i ~/.ssh/prod.pem ubuntu@portal_web_user1;
-split-window -v ssh -v ~/.ssh/prod.pem ubuntu@portal_web_user2;
+split-window -v ssh -i ~/.ssh/prod.pem ubuntu@portal_web_user2;
 
 new-window -n weba ssh -i ~/.ssh/prod.pem ubuntu@portal_web_admin1;
-split-window -v ssh -v ~/.ssh/prod.pem ubuntu@portal_web_admin2;
+split-window -v ssh -i ~/.ssh/prod.pem ubuntu@portal_web_admin2;
 
 select-layout tiled ;
 select-pane -t 0
