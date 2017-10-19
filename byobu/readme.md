@@ -17,7 +17,25 @@ SHIFT+F11 toggles a pane to fill the whole window temporarily.
 SHIFT+F2 creates a horizontal pane; CTRL+F2 creates a vertical one
 ```
 
+## Scripts
+- $BYOBU_CONFIG_DIR/windows.tmux.web
+```
+new-session 'bash' ;
 
+new-window -n webu ssh -i ~/.ssh/prod.pem ubuntu@portal_web_user1;
+split-window -v ssh -v ~/.ssh/prod.pem ubuntu@portal_web_user2;
+
+new-window -n weba ssh -i ~/.ssh/prod.pem ubuntu@portal_web_admin1;
+split-window -v ssh -v ~/.ssh/prod.pem ubuntu@portal_web_admin2;
+
+select-layout tiled ;
+select-pane -t 0
+```
+
+- Execute
+```
+BYOBU_WINDOWS=web byobu
+```
 
 ## Reference
 - https://www.digitalocean.com/community/tutorials/how-to-install-and-use-byobu-for-terminal-management-on-ubuntu-16-04
