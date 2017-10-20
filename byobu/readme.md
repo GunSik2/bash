@@ -12,6 +12,7 @@ CTRL+F9  send the same input to every window
 SHIFT+F9 send the same input to every pane.
 
 CTRL+F3/F4 moves the current pane up or down, respectively
+SHIFT+F3/F4 navigate between them (SHIFT+LEFT/RIGHT/UP/DOWN).
 SHIFT+F11 toggles a pane to fill the whole window temporarily.
 
 SHIFT+F2 creates a horizontal pane; CTRL+F2 creates a vertical one
